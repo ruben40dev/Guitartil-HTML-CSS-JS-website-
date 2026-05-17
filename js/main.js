@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    // =========================
-    // ===== NOTAS MUSICALES ===
-    // =========================
+
+    //notas
     const container = document.getElementById("notas-container");
 
     if (container) {
@@ -47,9 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // ===== SIDEBAR ===========
-    // =========================
+    //sidebar
     const btn = document.getElementById("toggleSidebar");
     const sidebar = document.querySelector(".sidebar");
     const btnCerrar = document.querySelector(".btn-cerrar");
@@ -67,9 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // ===== MODAL ============
-    // =========================
     const items = document.querySelectorAll(".menu-item");
     const modal = document.getElementById("modal");
     const titulo = document.getElementById("modal-titulo");
@@ -112,9 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // ===== FAVORITOS =========
-    // =========================
+
+    //favs
     const favs = document.querySelectorAll(".favorito");
     const sonidoClick = new Audio("audio/click.mp3");
 
@@ -160,9 +153,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // =========================
-    // ===== DATOS GUITARRAS ===
-    // =========================
+
+    //info guitars
    const infoGuitarras = {
     "Yamaha acústica": {
         stock: 1,
@@ -236,9 +228,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
 
 
-    // =========================
-    // ===== OVERLAY ===========
-    // =========================
+
+    //overlay
+
     const overlay = document.getElementById("overlay-guitarra");
     const cerrarOverlay = document.querySelector(".cerrar-overlay");
 
@@ -286,9 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // ===== CARRITO + ANIMACIÓN
-    // =========================
+
     const carritoCount = document.getElementById("carrito-count");
     const carritoBadge = document.getElementById("carrito-badge");
 
@@ -357,9 +347,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
 
-    // =========================
-    // ===== CARRITO REAL ======
-    // =========================
+
+    //cart
     const existeCarrito = document.getElementById("carrito-badge");
 
     if (existeCarrito) {
@@ -475,17 +464,10 @@ document.addEventListener("DOMContentLoaded", () => {
           window.location.href = "gracias.html";
           
         });
-        // =========================
-// ===== AUDIO GUITARRAS ====
-// =========================
 
-// Guardamos qué audio toca ahora cada guitarra
-// =========================
-// ===== AUDIO GUITARRAS ====
-// =========================
 
-// Guardamos qué audio toca ahora cada guitarra
-let audioEstado = {}; // { "Yamaha acústica": 1, ... }
+//oir guitar
+let audioEstado = {};
 
 const btnEscuchar = document.querySelector(".btn-escuchar");
 
@@ -494,35 +476,32 @@ if (btnEscuchar) {
 
         const nombre = overlayNombre.textContent;
 
-        // Si no existe estado, empezamos por audio 1
         if (!audioEstado[nombre]) audioEstado[nombre] = 1;
 
         const num = audioEstado[nombre]; // 1 o 2
 
-        // Seleccionamos el audio según toque
         const archivo = num === 1 
             ? `audio/sonidonormal${overlayNombre.textContent.length % 9 + 1}.mp3`
             : `audio/redoble${overlayNombre.textContent.length % 9 + 1}.mp3`;
 
-        // Si ya había un audio sonando, lo paramos
         if (window.audioActual) {
             window.audioActual.pause();
             window.audioActual.currentTime = 0;
         }
 
-        // Creamos el nuevo audio
+
         const audio = new Audio(archivo);
         window.audioActual = audio;
         audio.play();
 
-        // Alternamos para la próxima vez
+
         audioEstado[nombre] = num === 1 ? 2 : 1;
     });
     }
     }
- // =========================
-// ===== FORMULARIO VENDER =
-// =========================
+
+
+//formulario vender
 const paso1 = document.getElementById("paso1");
 const paso2 = document.getElementById("paso2");
 const paso3 = document.getElementById("paso3");
@@ -531,7 +510,7 @@ const btnSiguiente = document.getElementById("btn-siguiente");
 const btnEnviar = document.getElementById("btn-enviar");
 const inputPrecio = document.getElementById("precio");
 
-// FILTRO PRECIO
+
 if (inputPrecio) {
     inputPrecio.addEventListener("input", () => {
         inputPrecio.value = inputPrecio.value.replace(/\D/g, "");
@@ -543,7 +522,7 @@ if (inputPrecio) {
 
 if (paso1 && paso2 && paso3 && btnSiguiente && btnEnviar) {
 
-    // ----- PASO 1 → PASO 2 -----
+
     btnSiguiente.addEventListener("click", () => {
         const nombre = document.getElementById("nombre").value.trim();
         const email = document.getElementById("email").value.trim();
@@ -558,7 +537,7 @@ if (paso1 && paso2 && paso3 && btnSiguiente && btnEnviar) {
         paso2.classList.remove("oculto");
     });
 
-    // ----- PASO 2 → PASO 3 (MENSAJE FINAL BONITO) -----
+  
     btnEnviar.addEventListener("click", () => {
         const imagen = document.getElementById("imagen");
         const marca = document.getElementById("marca").value.trim();
@@ -571,7 +550,7 @@ if (paso1 && paso2 && paso3 && btnSiguiente && btnEnviar) {
             return;
         }
 
-        // Ocultar paso 2
+
         paso2.classList.add("oculto");
 
         // Subir arriba
@@ -589,9 +568,8 @@ if (paso1 && paso2 && paso3 && btnSiguiente && btnEnviar) {
     });
 }
 
-        // =========================
-    // ===== ORDENAR GUITARRAS =
-    // =========================
+
+
     const selectOrdenar = document.querySelector(".ordenar select");
     const gridGuitarras = document.querySelector(".grid-guitarras");
 
@@ -634,9 +612,9 @@ if (paso1 && paso2 && paso3 && btnSiguiente && btnEnviar) {
             cartas.forEach(c => gridGuitarras.appendChild(c));
         });
     }
-        // =========================
-// ===== REDES SOCIALES ====
-// =========================
+
+// RRSS     
+
 const ig = document.querySelector(".instagram");
 const tw = document.querySelector(".twitter");
 
@@ -649,10 +627,7 @@ if (tw) tw.addEventListener("click", () => {
 });
 
 
-// =========================
-// ===== TRANSICIÓN ÉPICA ===
-// =========================
-
+//transicion
 const overlayTransicion = document.getElementById("transition-overlay");
 
 const botonesTransicion = document.querySelectorAll(
@@ -686,9 +661,7 @@ botonesTransicion.forEach(boton => {
     });
 
 });
-// =========================
-// ===== POPUP COOKIES =====
-// =========================
+
 
 const popupCookies = document.getElementById("cookies-popup");
 const btnCookies = document.getElementById("aceptar-cookies");

@@ -75,15 +75,15 @@ document.addEventListener("DOMContentLoaded", () => {
         const contenido = {
             proyecto: {
                 titulo: "Nuestro proyecto",
-                texto: "El principal objetivo es dar una segunda vida a guitarras abandonadas..."
+                texto: "<br>El principal objetivo es dar una segunda vida a guitarras en desuso y/o en malas condiciones, para que aquellos apasionados de la música, que no cuenten con los recursos económicos suficientes, también tengan acceso a la cuarta arte."
             },
             quienes: {
                 titulo: "Quiénes somos",
-                texto: "Somos dos amigos apasionados por la música..."
+                texto: "<br> Somos dos amigos de Jerez de la Frontera ,apasionados por la música y la informática: un luthier y un desarrollador de aplicaciones web con más de 10 años de experiencia."
             },
             contacto: {
                 titulo: "Contacto",
-                texto: "guitartilcompraventa@gmail.com"
+                texto: "<br> guitartilcompraventa@gmail.com (ficticio)"
             }
         };
 

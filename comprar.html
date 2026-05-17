@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Comprar guitarras</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <div id="carrito-badge">
+        🛒 <span id="carrito-count">0</span>
+    </div>
+
+    <a href="index.html" class="btn-home">🏠</a>
+
+    <section class="comprar-header">
+        <h1>Guitarras disponibles (9)</h1>
+
+        <div class="ordenar">
+            <label>Ordenar por:</label>
+            <select>
+                <option>Precio (menor a mayor)</option>
+                <option>Precio (mayor a menor)</option>
+                <option>Nombre</option>
+                <option>Favoritos</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="grid-guitarras">
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitar1.jpg">
+            <h3>Yamaha acústica</h3>
+            <p>220€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitar2.jpg">
+            <h3>Gear4Music 3/4</h3>
+            <p>90€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitar3.jpg">
+            <h3>Alhambra 4F Flamenco</h3>
+            <p>300€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitar4.jpg">
+            <h3>Córdoba GK Studio</h3>
+            <p>200€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitar5.jpg">
+            <h3>Sin marca para zurdos</h3>
+            <p>120€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitartil1.jpg">
+            <h3>Guitartil Rociera</h3>
+            <p>205€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitartil2.jpg">
+            <h3>Guitartil Garbanzera</h3>
+            <p>165€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitartil3.jpg">
+            <h3>Guitartil Trebujenera</h3>
+            <p>150€</p>
+        </div>
+
+        <div class="guitarra-card">
+            <span class="favorito">♡</span>
+            <img src="img/guitartil4.jpg">
+            <h3>Guitartil Junior</h3>
+            <p>100€</p>
+        </div>
+
+    </section>
+
+    <div id="overlay-guitarra" class="overlay">
+        <div class="overlay-contenido">
+
+            <span class="cerrar-overlay">✖</span>
+
+            <img id="overlay-img" class="overlay-img">
+
+            <h2 id="overlay-nombre"></h2>
+
+            <p class="overlay-precio" id="overlay-precio"></p>
+
+            <p class="overlay-info"><strong>Estado:</strong> <span id="overlay-estado"></span></p>
+            <p class="overlay-info"><strong>Material:</strong> <span id="overlay-material"></span></p>
+
+            <p class="overlay-descripcion" id="overlay-descripcion"></p>
+
+            <div class="overlay-botones">
+                <button class="btn-carrito">Añadir al carrito</button>
+                <button class="btn-escuchar">🎧 Escuchar</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="carrito-panel" class="carrito-panel oculto">
+        <h2>Tu carrito</h2>
+        <div id="carrito-lista"></div>
+        <p id="carrito-total" class="carrito-total">Total: 0€</p>
+        <button id="btn-finalizar" class="btn-finalizar oculto">Realizar compra</button>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

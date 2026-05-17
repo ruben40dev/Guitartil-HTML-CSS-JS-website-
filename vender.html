@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Vender guitarra</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <a href="index.html" class="btn-home">🏠</a>
+
+    <div class="vender-container">
+
+        <div id="paso1">
+            <h1>Tus datos</h1>
+
+            <div class="campo">
+                <label>Nombre *</label>
+                <input type="text" id="nombre" required placeholder="Tu nombre">
+            </div>
+
+            <div class="campo">
+                <label>Apellido (opcional)</label>
+                <input type="text" id="apellido" placeholder="Tu apellido">
+            </div>
+
+            <div class="campo">
+                <label>Correo electrónico *</label>
+                <input type="email" id="email" required placeholder="ejemplo@gmail.com">
+            </div>
+
+            <div class="campo">
+                <label>Número de teléfono *</label>
+                <input type="tel" id="telefono" required placeholder="+34 ..." inputmode="numeric">
+            </div>
+
+            <button class="btn" id="btn-siguiente">Siguiente</button>
+        </div>
+
+        <div id="paso2" class="oculto">
+            <h1>Información de la guitarra</h1>
+
+            <div class="campo">
+                <label>Sube tu imagen *</label>
+                <input type="file" id="imagen" accept="image/*" required>
+            </div>
+
+            <div class="campo">
+                <label>Marca de la guitarra *</label>
+                <input type="text" id="marca" required>
+            </div>
+
+            <div class="campo">
+                <label>Material</label>
+                <input type="text" id="material">
+            </div>
+
+            <div class="campo">
+                <label>Antigüedad *</label>
+                <select id="antiguedad" required>
+                    <option value="">Selecciona</option>
+                    <option>Menos de 1 año</option>
+                    <option>Entre 1 y 2 años</option>
+                    <option>Entre 2 y 5 años</option>
+                    <option>Más de 5 años</option>
+                    <option>No lo sé</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label>Estado *</label>
+                <textarea id="estado" required></textarea>
+            </div>
+
+            <div class="campo">
+                <label>Desperfectos</label>
+                <textarea id="desperfectos"></textarea>
+            </div>
+
+            <div class="campo">
+                <label>Precio *</label>
+
+                <div class="precio-container">
+                    <input 
+                        type="number"
+                        id="precio"
+                        required
+                        min="0"
+                        max="99999"
+                        maxlength="5"
+                        placeholder="Ej: 350"
+                    >
+
+                    <select id="moneda">
+                        <option value="€">€</option>
+                        <option value="$">$</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="btn" id="btn-enviar">Enviar</button>
+        </div>
+
+        <div id="paso3" class="oculto">
+            <h1>¡Solicitud enviada!</h1>
+
+            <p class="mensaje-final">
+                Hemos recibido tu solicitud.<br>
+                En unos días nos pondremos en contacto contigo.
+            </p>
+
+            <a href="index.html" class="btn-volver-inicio">
+                Volver al inicio
+            </a>
+        </div>
+
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

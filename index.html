@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>guitartil</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+    <button id="toggleSidebar" class="btn-sidebar">☰</button>
+
+    <aside class="sidebar">
+        <button class="btn-cerrar">✖</button>
+
+        <nav class="menu">
+            <a href="#" class="menu-item" data-seccion="proyecto">Nuestro proyecto</a>
+            <a href="#" class="menu-item" data-seccion="quienes">Quiénes somos</a>
+            <a href="#" class="menu-item" data-seccion="contacto">Contacto</a>
+        </nav>
+
+        <div class="redes">
+            <img src="img/instagram.png" class="icono-red instagram">
+            <img src="img/twitter.png" class="icono-red twitter">
+        </div>
+    </aside>
+
+    <div id="notas-container"></div>
+
+    <section id="hero">
+        <img src="img/logo.png" class="logo">
+
+        <p class="eslogan">
+            Compra o vende tu guitarra de segunda mano.<br>
+            O descubre nuestras guitarras artesanales.
+        </p>
+
+        <div class="botones">
+            <a href="comprar.html" class="btn-accion">Comprar guitarras</a>
+            <a href="vender.html" class="btn-accion">¡Vende tu guitarra!</a>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">✖</span>
+            <h2 id="modal-titulo"></h2>
+            <p id="modal-texto"></p>
+        </div>
+    </div>
+
+    <div class="transition-overlay" id="transition-overlay">
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+        <div class="transition-bar"></div>
+    </div>
+
+    <div id="cookies-popup" class="cookies-popup">
+        <p>Usamos cookies para mejorar tu experiencia 🍪</p>
+        <button id="aceptar-cookies">Aceptar</button>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
